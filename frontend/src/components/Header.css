@@ -1,0 +1,19 @@
+header#main-header {
+  background: #fff;
+  height: 72px;
+  border-bottom: 1px solid #DDD;
+}
+
+header#main-header .header-content {
+  /* Responsivo */
+  width: 100%;
+  max-width: 980px; 
+  margin: 0 auto; /* Centraliza o conteúdo */
+  /* Responsivo */
+  height: 72px;
+  padding: 0 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

@@ -1,0 +1,71 @@
+#list-feed {
+  width: 100%;
+  max-width: 580px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+#post-list {
+  background: #FFF;
+  border: 1px solid #DDD;
+  margin-top: 30px;
+}
+
+#post-list header {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#post-list header .user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+#post-list header .user-info span {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+#post-list header .user-info span.place {
+  font-size: 11px;
+  color: #666;
+  margin-top: 3px;
+  font-weight: normal;
+}
+
+#list-feed #post-list > img {
+  width: 100%;
+}
+
+#list-feed #post-list footer {
+  padding: 20px;
+}
+
+#list-feed #post-list footer .actions {
+  margin-bottom: 10px;
+}
+
+#list-feed #post-list footer .actions button {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+#list-feed #post-list footer .actions img {
+  height: 20px;
+  margin-right: 10px;
+}
+
+#list-feed #post-list footer p {
+  font-size: 13px;
+  margin-top: 2px;
+  line-height: 18px;
+}
+
+#list-feed #post-list footer p span {
+  color: #2774ff;
+  display: block;
+}
+
