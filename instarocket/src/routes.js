@@ -17,5 +17,6 @@ export default createAppContainer(
       headerTitle: <Image source={logo} style={{ marginHorizontal: 20 }}/>,
       headerBackTitle: null,
     },
+    mode: 'modal'
   })
 );
