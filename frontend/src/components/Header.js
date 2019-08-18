@@ -6,8 +6,9 @@ import './Header.css';
 import logo from '../img/assets/assets/logo.svg'
 import camera from '../img/assets/assets/camera.svg'
 
-export default function Header() {
-  return (
+export default function Header() { //Essa é a parte do Header (ou cabeçalho) que 
+//será repetido durante a navegação do usuário na página
+  return ( //Retorna o cabeçalho em JSX
     <header id="main-header">
       <div className="header-content">
         <Link to="/">
