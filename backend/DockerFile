@@ -1,0 +1,8 @@
+FROM node:10-alpine
+
+WORKDIR /Users/user/Desktop/deploy
+COPY package.json yarn.lock ./
+
+RUN yarn
+
+COPY . .
