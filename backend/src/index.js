@@ -13,7 +13,8 @@ const server = require('http').Server(app); //A partir desse momento (com o sock
 const io = require('socket.io')(server); //A partir desse momento temos acesso ao protocolo WEBSOCKET
 //-----------------------------------------------------------------------------
 mongoose.connect('mongodb+srv://Omni:1234@cluster0-rvxaz.mongodb.net/test?retryWrites=true&w=majority', {
-  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useNewUrlParser: true
 });
 //-----------------------------------------------------------------------------
 //Toda requisição abaixo dessa "função" vai ter acesso ao [ req.io ]

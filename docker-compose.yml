@@ -1,0 +1,44 @@
+version: '2.2'
+
+services:
+
+    backend:
+        build:
+            dockerfile: ./backend/backend.dockerfile
+            context: .
+        image: node
+        container_name: backend
+        volumes:
+            - /backend/:/teste5/
+        expose: 
+            - "3333" 
+        command: npm start
+        networks: 
+            - network-instarocket
+
+    # frontend:
+    #     build:
+    #         dockerfile: ./frontend/frontend.dockerfile
+    #         context: .
+    #     image: node
+    #     container_name: frontend
+    #     volumes:
+    #         - .:/instarocket
+    #     expose: 
+    #         - "3000"
+    #     command: npm start
+    #     networks: 
+    #         - network-instarocket
+    #     depends_on: 
+    #         - "backend"
+
+    # mobile:
+    #     build: ./instarocket
+    #     image: react-native
+    #     container_name: mobile
+    #     networks: 
+    #         - network-instarocket
+
+networks:
+    network-instarocket:
+        driver: bridge
