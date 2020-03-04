@@ -1,13 +1,7 @@
 FROM node:latest
-MAINTAINER will-e-vini
-RUN mkdir /teste5
-COPY /backend/. /teste5/
-COPY /backend/package.json /teste5/
-ADD ["/backend/package.json", "/teste5/"]
-WORKDIR /teste5
-RUN cd /teste5 && ls && cat package.json
+RUN mkdir /teste15_back
+COPY . /teste15_back
 RUN npm install
-ENV NODE_PATH=/teste5/node_modules
-WORKDIR /teste5
-COPY . /teste5
-ENTRYPOINT ["npm", "start"]
+WORKDIR /teste15_back
+ENTRYPOINT ["npm", "run", "dev"]
+EXPOSE 3333

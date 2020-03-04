@@ -34,7 +34,7 @@ export default class Feed extends Component {
   }
 
   registerToSocket = () => {
-    const socket = io('http://192.168.1.41:3333');
+    const socket = io(api);
 
     //post, like
 
@@ -73,7 +73,7 @@ export default class Feed extends Component {
                 <Image source={more}/>
               </View>
 
-              <Image style={styles.feedImage} source={{ uri: `http://192.168.1.41:3333/files/${item.image}`}}/>
+              <Image style={styles.feedImage} source={{ uri: `${api}/files/${item.image}`}}/>
 
               <View style={styles.feedItemFooter}>
                 <View style={styles.actions}>

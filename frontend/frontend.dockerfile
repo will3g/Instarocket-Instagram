@@ -1,9 +1,7 @@
 FROM node:latest
-MAINTAINER will-e-vini
-#RUN mkdir /code
-WORKDIR /instarocket
-COPY . /instarocket/
-COPY ./frontend/package.json /instarocket/
+RUN mkdir /teste15_front
+COPY . /teste15_front
+WORKDIR /teste15_front
 RUN npm install -g create-react-app
 RUN npm install
 ENTRYPOINT ["npm", "start"]

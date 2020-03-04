@@ -4,40 +4,39 @@ services:
 
     backend:
         build:
-            dockerfile: ./backend/backend.dockerfile
-            context: .
+            dockerfile: ./backend.dockerfile
+            context: ./backend
         image: node
         container_name: backend
-        volumes:
-            - /backend/:/teste5/
         expose: 
             - "3333" 
-        command: npm start
         networks: 
             - network-instarocket
 
-    # frontend:
-    #     build:
-    #         dockerfile: ./frontend/frontend.dockerfile
-    #         context: .
-    #     image: node
-    #     container_name: frontend
-    #     volumes:
-    #         - .:/instarocket
-    #     expose: 
-    #         - "3000"
-    #     command: npm start
-    #     networks: 
-    #         - network-instarocket
-    #     depends_on: 
-    #         - "backend"
+    frontend:
+        build:
+            dockerfile: ./frontend.dockerfile
+            context: ./frontend
+        image: node
+        container_name: frontend
+        expose: 
+            - "3000"
+        networks: 
+            - network-instarocket
+        depends_on: 
+            - "backend"
 
-    # mobile:
-    #     build: ./instarocket
-    #     image: react-native
-    #     container_name: mobile
-    #     networks: 
-    #         - network-instarocket
+    mobile:
+        build:
+            dockerfile: ./mobile.dockerfile
+            context: ./instarocket
+        image: node
+        container_name: mobile
+        networks: 
+            - network-instarocket
+        depends_on: 
+            - "backend"
+            - "frontend"
 
 networks:
     network-instarocket:
