@@ -23,20 +23,20 @@ services:
             - "3000"
         networks: 
             - network-instarocket
-        depends_on: 
-            - "backend"
+        # depends_on: 
+        #     - "backend"
 
-    mobile:
-        build:
-            dockerfile: ./mobile.dockerfile
-            context: ./instarocket
-        image: node
-        container_name: mobile
-        networks: 
-            - network-instarocket
-        depends_on: 
-            - "backend"
-            - "frontend"
+    # mobile:
+    #     build:
+    #         dockerfile: ./mobile.dockerfile
+    #         context: ./instarocket
+    #     image: node
+    #     container_name: mobile
+    #     networks: 
+    #         - network-instarocket
+    #     depends_on: 
+    #         - "backend"
+    #         - "frontend"
 
 networks:
     network-instarocket:

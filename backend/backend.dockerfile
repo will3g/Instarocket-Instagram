@@ -1,7 +1,7 @@
 FROM node:latest
-RUN mkdir /teste15_back
-COPY . /teste15_back
+RUN mkdir /teste19_back
+COPY . /teste19_back
+WORKDIR /teste19_back
 RUN npm install
-WORKDIR /teste15_back
 ENTRYPOINT ["npm", "run", "dev"]
 EXPOSE 3333
