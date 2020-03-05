@@ -6,7 +6,7 @@ services:
         build:
             dockerfile: ./backend.dockerfile
             context: ./backend
-        image: node
+        image: backend-instarocket
         container_name: backend
         expose: 
             - "3333" 
@@ -17,14 +17,14 @@ services:
         build:
             dockerfile: ./frontend.dockerfile
             context: ./frontend
-        image: node
+        image: frontend-instarocket
         container_name: frontend
         expose: 
             - "3000"
         networks: 
             - network-instarocket
-        # depends_on: 
-        #     - "backend"
+        depends_on: 
+            - "backend"
 
     # mobile:
     #     build:
